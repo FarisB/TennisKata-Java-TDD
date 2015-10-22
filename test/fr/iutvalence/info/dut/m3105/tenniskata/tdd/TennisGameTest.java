@@ -10,8 +10,7 @@ public class TennisGameTest
 	public void WatchTheScoreOfTheBeginingOfTheGameExpectedLoveAllAsResult()
 	{
 		TennisGame gameTest = new TennisGame();
-		Assert.equals(gameTest.getScore(),"Love-all");
-		
+		Assert.assertEquals(gameTest.getScore(),"Love-all");
 	}
 
 }
