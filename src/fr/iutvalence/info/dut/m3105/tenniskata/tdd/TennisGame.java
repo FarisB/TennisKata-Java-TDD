@@ -3,18 +3,26 @@ public class TennisGame
 {
 	
 	private String score;
+	public final static String LOVE_ALL="Love-all";
+	public final static String FIFTEEN_LOVE="Fifteen-love";
+	public final static String LOVE_FIFTEEN="Love-fifteen";
 	
 	public String getScore() {
 		return score;
 	}
 
 	public void ServerScoredAPoint() {
-		score = "Fifteen-love";
+		score = FIFTEEN_LOVE;
 		
 	}
 
 	public TennisGame() {
 
-		this.score ="Love-all";
+		this.score=LOVE_ALL;
+	}
+
+	public void ReceiverScoredAPoint() {
+		score = LOVE_FIFTEEN;
+		
 	}
 }
