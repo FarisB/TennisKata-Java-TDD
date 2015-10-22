@@ -3,16 +3,17 @@ public class TennisGame
 {
 	
 	private String score;
-	public final static String LOVE_ALL="Love-all";
-	public final static String FIFTEEN_LOVE="Fifteen-love";
-	public final static String LOVE_FIFTEEN="Love-fifteen";
+	public static final String LOVE_ALL="Love-all";
+	public static final String FIFTEEN_LOVE="Fifteen-love";
+	public static final String LOVE_FIFTEEN="Love-fifteen";
+	public static final String FIFTEEN_ALL = "Fifteen-all";
 	
 	public String getScore() {
 		return score;
 	}
 
 	public void ServerScoredAPoint() {
-		score = FIFTEEN_LOVE;
+		this.score = FIFTEEN_LOVE;
 		
 	}
 
@@ -22,7 +23,14 @@ public class TennisGame
 	}
 
 	public void ReceiverScoredAPoint() {
-		score = LOVE_FIFTEEN;
+		this.score = LOVE_FIFTEEN;
 		
 	}
+
+	public void BothPlayerScoredAPointServerThanReceiver() {
+		
+		this.score = FIFTEEN_ALL;
+		
+	}
+	
 }

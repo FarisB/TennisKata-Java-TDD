@@ -10,27 +10,27 @@ public class TennisGameTest
 	public void WatchTheScoreOfTheBeginingOfTheGameExpectedLoveAllAsResult()
 	{
 		TennisGame gameTest = new TennisGame();
-		assertEquals(gameTest.getScore(),gameTest.LOVE_ALL);
+		assertEquals(gameTest.getScore(),TennisGame.LOVE_ALL);
 	}
-	
 	@Test
 	public void WatchTheScoreAfterOnePointForTheServerOnTheFirstPointOfTheSet(){
 		TennisGame gameTest = new TennisGame();
 		gameTest.ServerScoredAPoint();
-		assertEquals(gameTest.getScore(),gameTest.FIFTEEN_LOVE);
+		assertEquals(gameTest.getScore(),TennisGame.FIFTEEN_LOVE);
 	}
 	
 	@Test
 	public void WatchTheScoreAfterOnePointForTheReceiverOnTheFirstPointOfTheSet(){
 		TennisGame gameTest = new TennisGame();
 		gameTest.ReceiverScoredAPoint();
-		assertEquals(gameTest.getScore(),gameTest.LOVE_FIFTEEN);
+		assertEquals(gameTest.getScore(),TennisGame.LOVE_FIFTEEN);
 	}
 	
-	/*public void WatchTheScoreAfterSecondPointAndTheTwoPlayerScored(){
+	@Test
+	public void WatchTheScoreAfterSecondPointAndTheTwoPlayerScoredServerThanReceiver(){
 		TennisGame gameTest = new TennisGame();
-		gameTest.ReceiverScoredAPoint();
-		Assert.assertEquals(gameTest.getScore(),"Love-fifteen");
-	}*/
+		gameTest.BothPlayerScoredAPointServerThanReceiver();
+		assertEquals(gameTest.getScore(),TennisGame.FIFTEEN_ALL);
+	}
 
 }
